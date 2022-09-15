@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220915 16:40:26.623" rpa="false" schemaversion="3">
+<suite id="s1" name="Testcase" source="C:\Users\Admin\Desktop\robo-jumba\testcase.robot">
+<test id="s1-t1" name="Working on flipkart" line="8">
+<kw name="Open Flipkart" library="keyword">
+<arg>${flip}</arg>
+<kw name="Open Browser" library="Zoomba.GUILibrary">
+<arg>${url}</arg>
+<arg>gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220915 16:40:26.998" level="INFO">Opening browser 'gc' to base url 'https://www.flipkart.com/'.</msg>
+<status status="PASS" starttime="20220915 16:40:26.998" endtime="20220915 16:40:32.971"/>
+</kw>
+<kw name="Maximize Browser Window" library="Zoomba.GUILibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220915 16:40:32.971" endtime="20220915 16:40:33.138"/>
+</kw>
+<kw name="Click Element" library="Zoomba.GUILibrary">
+<arg>${close_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:40:33.139" level="INFO">Clicking element 'xpath=//*[@class ="_2KpZ6l _2doB4z"]'.</msg>
+<status status="PASS" starttime="20220915 16:40:33.138" endtime="20220915 16:40:33.262"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 16:40:38.275" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220915 16:40:33.263" endtime="20220915 16:40:38.275"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:26.998" endtime="20220915 16:40:38.275"/>
+</kw>
+<kw name="Go to ‘Electronics’ tab" library="keyword">
+<kw name="Mouse Over" library="Zoomba.GUILibrary">
+<arg>${electronics}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220915 16:40:38.277" level="INFO">Simulating Mouse Over on element 'xpath=//*[@id="container"]/div/div[2]/div/div/div[5]/a/div[2]'.</msg>
+<status status="PASS" starttime="20220915 16:40:38.276" endtime="20220915 16:40:38.592"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:38.276" endtime="20220915 16:40:38.592"/>
+</kw>
+<kw name="Search for any of your desired Mobile from ‘Mobiles’ section" library="keyword">
+<kw name="Get Element Count" library="Zoomba.GUILibrary">
+<var>${audio}</var>
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220915 16:40:38.618" level="INFO">${audio} = 14</msg>
+<status status="PASS" starttime="20220915 16:40:38.593" endtime="20220915 16:40:38.618"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${audio}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:40:38.618" endtime="20220915 16:40:38.618"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 16:40:41.621" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220915 16:40:38.620" endtime="20220915 16:40:41.621"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>${audio}</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Get Text" library="Zoomba.GUILibrary">
+<var>${list_names}</var>
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:40:41.683" level="INFO">${list_names} = Audio</msg>
+<status status="PASS" starttime="20220915 16:40:41.622" endtime="20220915 16:40:41.683"/>
+</kw>
+<kw name="Scroll Element Into View" library="Zoomba.GUILibrary">
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[14]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220915 16:40:41.683" endtime="20220915 16:40:42.012"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list_names}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:40:42.012" endtime="20220915 16:40:42.013"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${list_names}" == "${tablet}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220915 16:40:42.014" endtime="20220915 16:40:42.014"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:41.622" endtime="20220915 16:40:42.015"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Get Text" library="Zoomba.GUILibrary">
+<var>${list_names}</var>
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:40:42.062" level="INFO">${list_names} = Electronics GST Store</msg>
+<status status="PASS" starttime="20220915 16:40:42.015" endtime="20220915 16:40:42.062"/>
+</kw>
+<kw name="Scroll Element Into View" library="Zoomba.GUILibrary">
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[14]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220915 16:40:42.062" endtime="20220915 16:40:42.340"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list_names}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:40:42.340" endtime="20220915 16:40:42.340"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${list_names}" == "${tablet}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220915 16:40:42.340" endtime="20220915 16:40:42.340"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:42.015" endtime="20220915 16:40:42.340"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Get Text" library="Zoomba.GUILibrary">
+<var>${list_names}</var>
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:40:42.387" level="INFO">${list_names} = Cameras &amp; Accessories</msg>
+<status status="PASS" starttime="20220915 16:40:42.340" endtime="20220915 16:40:42.387"/>
+</kw>
+<kw name="Scroll Element Into View" library="Zoomba.GUILibrary">
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[14]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220915 16:40:42.387" endtime="20220915 16:40:42.659"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list_names}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:40:42.659" endtime="20220915 16:40:42.659"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${list_names}" == "${tablet}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220915 16:40:42.659" endtime="20220915 16:40:42.659"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:42.340" endtime="20220915 16:40:42.659"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Get Text" library="Zoomba.GUILibrary">
+<var>${list_names}</var>
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:40:42.691" level="INFO">${list_names} = Computer Peripherals</msg>
+<status status="PASS" starttime="20220915 16:40:42.659" endtime="20220915 16:40:42.691"/>
+</kw>
+<kw name="Scroll Element Into View" library="Zoomba.GUILibrary">
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[14]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220915 16:40:42.691" endtime="20220915 16:40:42.968"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list_names}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:40:42.968" endtime="20220915 16:40:42.968"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${list_names}" == "${tablet}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220915 16:40:42.968" endtime="20220915 16:40:42.968"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:42.659" endtime="20220915 16:40:42.968"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Get Text" library="Zoomba.GUILibrary">
+<var>${list_names}</var>
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:40:43.000" level="INFO">${list_names} = Gaming</msg>
+<status status="PASS" starttime="20220915 16:40:42.968" endtime="20220915 16:40:43.000"/>
+</kw>
+<kw name="Scroll Element Into View" library="Zoomba.GUILibrary">
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[14]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220915 16:40:43.000" endtime="20220915 16:40:43.285"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list_names}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:40:43.285" endtime="20220915 16:40:43.285"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${list_names}" == "${tablet}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220915 16:40:43.285" endtime="20220915 16:40:43.285"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:42.968" endtime="20220915 16:40:43.285"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Get Text" library="Zoomba.GUILibrary">
+<var>${list_names}</var>
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:40:43.332" level="INFO">${list_names} = Health &amp; Personal Care</msg>
+<status status="PASS" starttime="20220915 16:40:43.285" endtime="20220915 16:40:43.332"/>
+</kw>
+<kw name="Scroll Element Into View" library="Zoomba.GUILibrary">
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[14]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220915 16:40:43.332" endtime="20220915 16:40:43.614"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list_names}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:40:43.614" endtime="20220915 16:40:43.614"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${list_names}" == "${tablet}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220915 16:40:43.614" endtime="20220915 16:40:43.614"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:43.285" endtime="20220915 16:40:43.614"/>
+</iter>
+<iter>
+<var name="${i}">7</var>
+<kw name="Get Text" library="Zoomba.GUILibrary">
+<var>${list_names}</var>
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:40:43.671" level="INFO">${list_names} = Laptop Accessories</msg>
+<status status="PASS" starttime="20220915 16:40:43.614" endtime="20220915 16:40:43.671"/>
+</kw>
+<kw name="Scroll Element Into View" library="Zoomba.GUILibrary">
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[14]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220915 16:40:43.671" endtime="20220915 16:40:43.961"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list_names}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:40:43.961" endtime="20220915 16:40:43.961"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${list_names}" == "${tablet}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220915 16:40:43.961" endtime="20220915 16:40:43.961"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:43.614" endtime="20220915 16:40:43.961"/>
+</iter>
+<iter>
+<var name="${i}">8</var>
+<kw name="Get Text" library="Zoomba.GUILibrary">
+<var>${list_names}</var>
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:40:43.992" level="INFO">${list_names} = Laptop and Desktop</msg>
+<status status="PASS" starttime="20220915 16:40:43.961" endtime="20220915 16:40:43.992"/>
+</kw>
+<kw name="Scroll Element Into View" library="Zoomba.GUILibrary">
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[14]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220915 16:40:43.992" endtime="20220915 16:40:44.285"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list_names}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:40:44.285" endtime="20220915 16:40:44.285"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${list_names}" == "${tablet}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220915 16:40:44.285" endtime="20220915 16:40:44.285"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:43.961" endtime="20220915 16:40:44.285"/>
+</iter>
+<iter>
+<var name="${i}">9</var>
+<kw name="Get Text" library="Zoomba.GUILibrary">
+<var>${list_names}</var>
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:40:44.332" level="INFO">${list_names} = MobileAccessory</msg>
+<status status="PASS" starttime="20220915 16:40:44.285" endtime="20220915 16:40:44.332"/>
+</kw>
+<kw name="Scroll Element Into View" library="Zoomba.GUILibrary">
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[14]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220915 16:40:44.332" endtime="20220915 16:40:44.609"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list_names}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:40:44.609" endtime="20220915 16:40:44.609"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${list_names}" == "${tablet}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220915 16:40:44.609" endtime="20220915 16:40:44.609"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:44.285" endtime="20220915 16:40:44.609"/>
+</iter>
+<iter>
+<var name="${i}">10</var>
+<kw name="Get Text" library="Zoomba.GUILibrary">
+<var>${list_names}</var>
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:40:44.656" level="INFO">${list_names} = Powerbank</msg>
+<status status="PASS" starttime="20220915 16:40:44.609" endtime="20220915 16:40:44.656"/>
+</kw>
+<kw name="Scroll Element Into View" library="Zoomba.GUILibrary">
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[14]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220915 16:40:44.656" endtime="20220915 16:40:44.983"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list_names}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:40:44.983" endtime="20220915 16:40:44.985"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${list_names}" == "${tablet}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220915 16:40:44.985" endtime="20220915 16:40:44.986"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:44.609" endtime="20220915 16:40:44.986"/>
+</iter>
+<iter>
+<var name="${i}">11</var>
+<kw name="Get Text" library="Zoomba.GUILibrary">
+<var>${list_names}</var>
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:40:45.038" level="INFO">${list_names} = Smart Home automation</msg>
+<status status="PASS" starttime="20220915 16:40:44.987" endtime="20220915 16:40:45.038"/>
+</kw>
+<kw name="Scroll Element Into View" library="Zoomba.GUILibrary">
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[14]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220915 16:40:45.038" endtime="20220915 16:40:45.327"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list_names}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:40:45.327" endtime="20220915 16:40:45.328"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${list_names}" == "${tablet}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220915 16:40:45.328" endtime="20220915 16:40:45.328"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:44.986" endtime="20220915 16:40:45.329"/>
+</iter>
+<iter>
+<var name="${i}">12</var>
+<kw name="Get Text" library="Zoomba.GUILibrary">
+<var>${list_names}</var>
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:40:45.372" level="INFO">${list_names} = Smart Wearables</msg>
+<status status="PASS" starttime="20220915 16:40:45.329" endtime="20220915 16:40:45.372"/>
+</kw>
+<kw name="Scroll Element Into View" library="Zoomba.GUILibrary">
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[14]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220915 16:40:45.372" endtime="20220915 16:40:45.658"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list_names}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:40:45.658" endtime="20220915 16:40:45.658"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${list_names}" == "${tablet}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220915 16:40:45.658" endtime="20220915 16:40:45.658"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:45.329" endtime="20220915 16:40:45.658"/>
+</iter>
+<iter>
+<var name="${i}">13</var>
+<kw name="Get Text" library="Zoomba.GUILibrary">
+<var>${list_names}</var>
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:40:45.689" level="INFO">${list_names} = Storage</msg>
+<status status="PASS" starttime="20220915 16:40:45.658" endtime="20220915 16:40:45.689"/>
+</kw>
+<kw name="Scroll Element Into View" library="Zoomba.GUILibrary">
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[14]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220915 16:40:45.689" endtime="20220915 16:40:45.976"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list_names}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:40:45.976" endtime="20220915 16:40:45.976"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"${list_names}" == "${tablet}"</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220915 16:40:45.976" endtime="20220915 16:40:45.976"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:45.658" endtime="20220915 16:40:45.976"/>
+</iter>
+<status status="PASS" starttime="20220915 16:40:41.621" endtime="20220915 16:40:45.976"/>
+</for>
+<kw name="Mouse Over" library="Zoomba.GUILibrary">
+<arg>xpath=//*[@class="_3XS_gI _7qr1OC"]/a[14]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220915 16:40:45.976" level="INFO">Simulating Mouse Over on element 'xpath=//*[@class="_3XS_gI _7qr1OC"]/a[14]'.</msg>
+<status status="PASS" starttime="20220915 16:40:45.976" endtime="20220915 16:40:46.258"/>
+</kw>
+<kw name="Get Text" library="Zoomba.GUILibrary">
+<var>${Click Element}</var>
+<arg>${all}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:40:46.300" level="INFO">${Click Element} = Tablets Without Call Facility</msg>
+<status status="PASS" starttime="20220915 16:40:46.259" endtime="20220915 16:40:46.300"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Click Element}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:40:46.300" endtime="20220915 16:40:46.301"/>
+</kw>
+<kw name="Click Element" library="Zoomba.GUILibrary">
+<arg>${all}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:40:46.302" level="INFO">Clicking element 'xpath=//*[@class="_3XS_gI"]/a[3]'.</msg>
+<status status="PASS" starttime="20220915 16:40:46.301" endtime="20220915 16:40:46.387"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:38.593" endtime="20220915 16:40:46.387"/>
+</kw>
+<kw name="Do not select first 5 mobiles from the list.Try scrolling and search for the mobile" library="keyword">
+<kw name="Click Element" library="Zoomba.GUILibrary">
+<arg>${somewhere}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:40:46.390" level="INFO">Clicking element 'xpath=//*[@class="L0Z3Pu"]'.</msg>
+<status status="PASS" starttime="20220915 16:40:46.390" endtime="20220915 16:40:46.557"/>
+</kw>
+<kw name="Execute Javascript" library="Zoomba.GUILibrary">
+<arg>window.scrollTo(0,3000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220915 16:40:46.558" level="INFO">Executing JavaScript:
+window.scrollTo(0,3000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220915 16:40:46.558" endtime="20220915 16:40:46.569"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 16:40:49.570" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220915 16:40:46.569" endtime="20220915 16:40:49.570"/>
+</kw>
+<kw name="Execute Javascript" library="Zoomba.GUILibrary">
+<arg>window.scrollTo(0,1000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220915 16:40:49.576" level="INFO">Executing JavaScript:
+window.scrollTo(0,1000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220915 16:40:49.573" endtime="20220915 16:40:49.611"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 16:40:52.611" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220915 16:40:49.611" endtime="20220915 16:40:52.611"/>
+</kw>
+<kw name="Execute Javascript" library="Zoomba.GUILibrary">
+<arg>window.scrollTo(0,1500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220915 16:40:52.612" level="INFO">Executing JavaScript:
+window.scrollTo(0,1500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220915 16:40:52.611" endtime="20220915 16:40:52.694"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 16:41:02.696" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220915 16:40:52.695" endtime="20220915 16:41:02.696"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:46.389" endtime="20220915 16:41:02.696"/>
+</kw>
+<kw name="go to that specific mobile’s details page." library="keyword">
+<kw name="Click Element" library="Zoomba.GUILibrary">
+<arg>${lap}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:41:02.696" level="INFO">Clicking element 'xpath=/html/body/div[1]/div/div[3]/div[1]/div[2]/div[7]/div/div/div/a/div[2]/div[1]/div[1]'.</msg>
+<status status="PASS" starttime="20220915 16:41:02.696" endtime="20220915 16:41:02.838"/>
+</kw>
+<kw name="Get Window Handles" library="Zoomba.GUILibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20220915 16:41:02.842" level="INFO">${handles} = ['CDwindow-236442957785C7A1001FD4D43C216470', 'CDwindow-079153B3845933BADDF9BA91642A9CE1']</msg>
+<status status="PASS" starttime="20220915 16:41:02.839" endtime="20220915 16:41:02.842"/>
+</kw>
+<kw name="Switch Window" library="Zoomba.GUILibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220915 16:41:02.843" endtime="20220915 16:41:02.919"/>
+</kw>
+<kw name="Get Title" library="Zoomba.GUILibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20220915 16:41:04.891" level="INFO">${title} = APPLE iPad (9th Gen) 64 GB ROM 10.2 inch with Wi-Fi Only (Silver) Price in India - Buy APPLE iPad (9th Gen) 64 GB ROM 10.2 inch with Wi-Fi Only (Silver) Silver 64 Online - APPLE : Flipkart.com</msg>
+<status status="PASS" starttime="20220915 16:41:02.920" endtime="20220915 16:41:04.891"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:41:04.892" endtime="20220915 16:41:04.893"/>
+</kw>
+<kw name="Get Text" library="Zoomba.GUILibrary">
+<var>${prod1}</var>
+<arg>xpath=/html/body/div[1]/div/div[3]/div[1]/div[2]/div[2]/div/div[1]/h1/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:41:04.928" level="INFO">${prod1} = APPLE iPad (9th Gen) 64 GB ROM 10.2 inch with Wi-Fi Only (Silver)</msg>
+<status status="PASS" starttime="20220915 16:41:04.893" endtime="20220915 16:41:04.928"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${prod1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:41:04.928" endtime="20220915 16:41:04.928"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 16:41:14.937" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220915 16:41:04.928" endtime="20220915 16:41:14.937"/>
+</kw>
+<kw name="Execute Javascript" library="Zoomba.GUILibrary">
+<arg>window.scrollTo(0,1000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220915 16:41:14.937" level="INFO">Executing JavaScript:
+window.scrollTo(0,1000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220915 16:41:14.937" endtime="20220915 16:41:14.974"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 16:41:18.987" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20220915 16:41:14.974" endtime="20220915 16:41:18.988"/>
+</kw>
+<kw name="Click Element" library="Zoomba.GUILibrary">
+<arg>${addtocart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:41:18.989" level="INFO">Clicking element 'xpath=/html/body/div[1]/div/div[3]/div[1]/div[1]/div[2]/div/ul/li[1]/button'.</msg>
+<status status="PASS" starttime="20220915 16:41:18.988" endtime="20220915 16:41:19.102"/>
+</kw>
+<kw name="Get Window Handles" library="Zoomba.GUILibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20220915 16:41:19.106" level="INFO">${handles} = ['CDwindow-236442957785C7A1001FD4D43C216470', 'CDwindow-079153B3845933BADDF9BA91642A9CE1']</msg>
+<status status="PASS" starttime="20220915 16:41:19.102" endtime="20220915 16:41:19.106"/>
+</kw>
+<kw name="Switch Window" library="Zoomba.GUILibrary">
+<arg>${handles}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220915 16:41:19.106" endtime="20220915 16:41:19.141"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 16:41:23.150" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20220915 16:41:19.141" endtime="20220915 16:41:23.150"/>
+</kw>
+<kw name="Click Element" library="Zoomba.GUILibrary">
+<arg>${cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:41:23.150" level="INFO">Clicking element 'xpath=//*[@id="container"]/div/div[1]/div[1]/div[2]/div[6]/div/div'.</msg>
+<status status="PASS" starttime="20220915 16:41:23.150" endtime="20220915 16:41:23.223"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 16:41:28.231" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220915 16:41:23.223" endtime="20220915 16:41:28.231"/>
+</kw>
+<kw name="Get Text" library="Zoomba.GUILibrary">
+<var>${cart_mob}</var>
+<arg>xpath=/html/body/div[1]/div/div[2]/div/div/div[1]/div/div[3]/div/div[1]/div[1]/div[1]/a</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220915 16:41:28.262" level="INFO">${cart_mob} = APPLE iPad (9th Gen) 64 GB ROM 10.2 inch with Wi-Fi Only (Silver)</msg>
+<status status="PASS" starttime="20220915 16:41:28.231" endtime="20220915 16:41:28.262"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${cart_mob}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:41:28.262" endtime="20220915 16:41:28.262"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${prod1}&quot; == &quot;${cart_mob}&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>IT IS UR MOBILE</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220915 16:41:28.262" endtime="20220915 16:41:28.262"/>
+</kw>
+<status status="PASS" starttime="20220915 16:41:28.262" endtime="20220915 16:41:28.262"/>
+</branch>
+<status status="PASS" starttime="20220915 16:41:28.262" endtime="20220915 16:41:28.262"/>
+</if>
+<status status="PASS" starttime="20220915 16:41:02.696" endtime="20220915 16:41:28.262"/>
+</kw>
+<status status="PASS" starttime="20220915 16:40:26.998" endtime="20220915 16:41:28.262"/>
+</test>
+<status status="PASS" starttime="20220915 16:40:26.623" endtime="20220915 16:41:28.262"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testcase">Testcase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
